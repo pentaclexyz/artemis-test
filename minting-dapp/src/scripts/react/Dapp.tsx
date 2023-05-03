@@ -254,12 +254,16 @@ export default class Dapp extends React.Component<Props, State> {
                     </>
                     :
                     <div className="no-wallet">
+                        <img id="logo" className={"pb-8"} src="/build/images/milady.png" alt="Logo" />
+
                         {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined}
                                                              onClick={() => this.connectWallet()}>Connect
                             Wallet</button> : null}
 
+
+
                         <div className={"mt-8"}>
-                            A collection of 5,000 banner NFTs with generative backgrounds and original text, : <br></br>
+                            A collection of 5,000 banner NFTs with generative backgrounds and original text,<br></br>
                             Japanese dolls in photo comic drama style, <br></br>
                             sweet shop Russian supercomputers, <br></br>
                             semi-vintage magazine covers, <br></br>
