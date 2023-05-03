@@ -14,7 +14,6 @@ module.exports = {
           from_bg: colors.slate[100],
           to_bg: colors.slate[200],
         },
-        titles: colors.indigo[600],
         links: {
           txt: colors.indigo[600],
           hover_txt: colors.indigo[700],

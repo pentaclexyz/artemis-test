@@ -44,6 +44,7 @@ main {
     @apply flex flex-col;
     @apply rounded-lg;
     @apply p-3;
+    line-break: anywhere;
 
     @apply text-error-txt text-sm;
     @apply bg-error-bg;

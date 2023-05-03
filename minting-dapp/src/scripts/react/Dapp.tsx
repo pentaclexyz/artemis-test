@@ -68,15 +68,12 @@ export default class Dapp extends React.Component<Props, State> {
         if (browserProvider?.isMetaMask !== true) {
             this.setError(
                 <>
-                    We were not able to detect <strong>MetaMask</strong>. We value <strong>privacy and
-                    security</strong> a lot so we limit the wallet options on the DAPP.<br/>
-                    <br/>
-                    But don't worry! <span className="emoji">😃</span> You can always interact with the smart-contract
+                    We were not able to detect MetaMask. You can always interact with the smart-contract
                     through <a href={this.generateContractUrl()}
                                target="_blank">{this.state.networkConfig.blockExplorer.name}</a> and <strong>we do our
                     best to provide you with the best user experience possible</strong>, even from there.<br/>
                     <br/>
-                    You can also get your <strong>Whitelist Proof</strong> manually, using the tool below.
+                    You can get your <strong>Whitelist Proof</strong> manually, using the tool below.
                 </>,
             );
         }
@@ -200,6 +197,14 @@ export default class Dapp extends React.Component<Props, State> {
                     <>
                         {this.isContractReady() ?
                             <>
+                                <div className={"not-mainnet p-4 text-center"}>
+                                    A collection of 5,000 banner NFTs with generative backgrounds and original text,<br></br>
+                                    Japanese dolls in photo comic drama style,
+                                    sweet shop Russian supercomputers,
+                                    semi-vintage magazine covers,
+                                    and friends from Pixelady Maker
+                                    – who say, Milady.
+                                </div>
                                 <CollectionStatus
                                     userAddress={this.state.userAddress}
                                     maxSupply={this.state.maxSupply}
@@ -225,11 +230,11 @@ export default class Dapp extends React.Component<Props, State> {
                                     />
                                     :
                                     <div className="collection-sold-out">
-                                        <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span>
+                                        <h2>Tokens are <strong>sold out</strong>! <span className="emoji">🥳</span>
                                         </h2>
 
-                                        You can buy from our beloved holders on <a href={this.generateMarketplaceUrl()}
-                                                                                   target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
+                                        You can buy on secondary <a href={this.generateMarketplaceUrl()}
+                                                                    target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
                                     </div>
                                 }
                             </>
@@ -253,35 +258,44 @@ export default class Dapp extends React.Component<Props, State> {
                                                              onClick={() => this.connectWallet()}>Connect
                             Wallet</button> : null}
 
-                        <div className="use-block-explorer">
-                            You can interact with the smart-contract directly through <a
-                            href={this.generateContractUrl()}
-                            target="_blank">{this.state.networkConfig.blockExplorer.name}</a>, without connecting
-                            your wallet to this UI.<br/>
+                        <div className={"mt-8"}>
+                            A collection of 5,000 banner NFTs with generative backgrounds and original text, : <br></br>
+                            Japanese dolls in photo comic drama style, <br></br>
+                            sweet shop Russian supercomputers, <br></br>
+                            semi-vintage magazine covers, <br></br>
+                            and friends from Pixelady Maker <br></br>
+                            – who say, Milady.
                         </div>
 
-                        {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
-                            <div className="merkle-proof-manual-address">
-                                <h2>Check whitelist</h2>
-                                <p>
-                                    Enter address below to check if it is in the whitelist.
-                                </p>
+                        {/*<div className="use-block-explorer mt-20">*/}
+                        {/*    You can also interact with the smart-contract directly through <a*/}
+                        {/*    href={this.generateContractUrl()}*/}
+                        {/*    target="_blank">{this.state.networkConfig.blockExplorer.name}</a>, without connecting*/}
+                        {/*    your wallet to this UI.*/}
+                        {/*</div>*/}
 
-                                {this.state.merkleProofManualAddressFeedbackMessage ? <div
-                                    className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
+                        {/*{!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?*/}
+                        {/*    <div className="merkle-proof-manual-address">*/}
+                        {/*        <h2>Check whitelist</h2>*/}
+                        {/*        <p>*/}
+                        {/*            Enter address below to check if it is in the whitelist and generate the proof.*/}
+                        {/*        </p>*/}
 
-                                <label htmlFor="merkle-proof-manual-address">Public address:</label>
-                                <input id="merkle-proof-manual-address" type="text" placeholder="0x000..."
-                                       disabled={this.state.userAddress !== null}
-                                       value={this.state.userAddress ?? this.state.merkleProofManualAddress}
-                                       ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {
-                                    this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})
-                                }}/>
-                                <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to
-                                    clipboard
-                                </button>
-                            </div>
-                            : null}
+                        {/*        {this.state.merkleProofManualAddressFeedbackMessage ? <div*/}
+                        {/*            className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}*/}
+
+                        {/*        <label htmlFor="merkle-proof-manual-address">Public address:</label>*/}
+                        {/*        <input id="merkle-proof-manual-address" type="text" placeholder="0x000..."*/}
+                        {/*               disabled={this.state.userAddress !== null}*/}
+                        {/*               value={this.state.userAddress ?? this.state.merkleProofManualAddress}*/}
+                        {/*               ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {*/}
+                        {/*            this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})*/}
+                        {/*        }}/>*/}
+                        {/*        <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to*/}
+                        {/*            clipboard*/}
+                        {/*        </button>*/}
+                        {/*    </div>*/}
+                        {/*    : null}*/}
                     </div>
                 }
             </>
