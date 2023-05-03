@@ -13,9 +13,5 @@
   },
   "dependencies": {
     "truffle": "^5.8.4"
-  },
-  "engines": {
-    "node": "14.x",
-    "yarn": "^1.22.x"
   }
 }
