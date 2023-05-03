@@ -47,11 +47,11 @@ module.exports = {
         },
         btn_primary: {
           txt: colors.white,
-          bg: colors.indigo[500],
-          border: colors.indigo[500],
+          bg: colors.pink[500],
+          border: colors.pink[500],
           hover_txt: colors.white,
-          hover_bg: colors.indigo[600],
-          hover_border: colors.indigo[600],
+          hover_bg: colors.pink[600],
+          hover_border: colors.pink[600],
         },
         btn_error: {
           txt: colors.white,

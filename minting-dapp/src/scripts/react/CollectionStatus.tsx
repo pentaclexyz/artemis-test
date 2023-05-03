@@ -38,12 +38,12 @@ export default class CollectionStatus extends React.Component<Props, State> {
           </div>
           
           <div className="supply">
-            <span className="label">Supply</span>
+            <span className="label">Minted:</span>
             {this.props.totalSupply}/{this.props.maxSupply}
           </div>
 
           <div className="current-sale">
-            <span className="label">Sale status</span>
+            <span className="label">Sale status:</span>
             {this.isSaleOpen() ?
               <>
                 {this.props.isWhitelistMintEnabled ? 'Whitelist only' : 'Open'}
