@@ -1,7 +1,7 @@
 {
     "name": "@hashlips-lab/nft-erc721-collection-minting-dapp",
     "version": "0.0.0",
-    "private": true
+    "private": true,
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
         "@metamask/detect-provider": "^1.2.0",
