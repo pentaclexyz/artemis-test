@@ -13,22 +13,22 @@ const CollectionConfig: CollectionConfigInterface = {
   tokenName: "Say Milady",
   tokenSymbol: "SAYMILADY",
   hiddenMetadataUri:
-    "ipfs://QmSaraujoMTj1Rez4FAtkYH29nUqpgWr4upgw9nvoUgaXZ/hidden.json",
-  maxSupply: 20,
+    "ipfs://QmaYvHyzLgTMNSv8ULiuCAstgQcuWAmUdzj8ryCkKdRU2W/hidden.json",
+  maxSupply: 5000,
   whitelistSale: {
-    price: 0.05,
-    maxMintAmountPerTx: 1,
+    price: 0.023,
+    maxMintAmountPerTx: 20,
   },
   preSale: {
-    price: 0.07,
-    maxMintAmountPerTx: 2,
+    price: 0.023,
+    maxMintAmountPerTx: 20,
   },
   publicSale: {
-    price: 0.09,
-    maxMintAmountPerTx: 5,
+    price: 0.028,
+    maxMintAmountPerTx: 20,
   },
-  contractAddress: "0xE69B34fB7B84974c06265F7f59D15A2e5e9deA1E",
-  marketplaceIdentifier: "my-nft-token",
+  contractAddress: null,
+  marketplaceIdentifier: "say-milady",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };

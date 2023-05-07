@@ -197,14 +197,16 @@ export default class Dapp extends React.Component<Props, State> {
                     <>
                         {this.isContractReady() ?
                             <>
-                                <div className={"not-mainnet p-4 text-center"}>
-                                    A collection of 5,000 banner NFTs with generative backgrounds and original text,<br></br>
+                                <div className={"not-mainnet p-4"}>
+                                    A collection of 5,000 banner NFTs with generative backgrounds and original
+                                    text,<br></br>
                                     Japanese dolls in photo comic drama style,
                                     sweet shop Russian supercomputers,
                                     semi-vintage magazine covers,
                                     and friends from Pixelady Maker
                                     – who say, Milady.
                                 </div>
+
                                 <CollectionStatus
                                     userAddress={this.state.userAddress}
                                     maxSupply={this.state.maxSupply}
@@ -214,6 +216,7 @@ export default class Dapp extends React.Component<Props, State> {
                                     isUserInWhitelist={this.state.isUserInWhitelist}
                                     isSoldOut={this.isSoldOut()}
                                 />
+
                                 {!this.isSoldOut() ?
                                     <MintWidget
                                         networkConfig={this.state.networkConfig}
@@ -230,13 +233,13 @@ export default class Dapp extends React.Component<Props, State> {
                                     />
                                     :
                                     <div className="collection-sold-out">
-                                        <h2>Tokens are <strong>sold out</strong>! <span className="emoji">🥳</span>
-                                        </h2>
-
-                                        You can buy on secondary <a href={this.generateMarketplaceUrl()}
-                                                                    target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
+                                        <h2>Say Milady is minted out yay!</h2>
                                     </div>
                                 }
+                                <article className={"flex flex-row justify-between text-sm"}>
+                                    <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>twitter</a></div>
+                                    <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>copyleft license</a></div>
+                                </article>
                             </>
                             :
                             <div className="collection-not-ready">
@@ -247,20 +250,17 @@ export default class Dapp extends React.Component<Props, State> {
                                     <path className="opacity-75" fill="currentColor"
                                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
-
                                 Loading collection data...
                             </div>
                         }
                     </>
                     :
                     <div className="no-wallet">
-                        <img id="logo" className={"pb-8"} src="/build/images/milady.png" alt="Logo" />
+                        <img id="logo" className={"pb-8"} src="/build/images/milady.png" alt="Logo"/>
 
                         {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined}
                                                              onClick={() => this.connectWallet()}>Connect
                             Wallet</button> : null}
-
-
 
                         <div className={"mt-8"}>
                             A collection of 5,000 banner NFTs with generative backgrounds and original text,<br></br>
@@ -271,35 +271,11 @@ export default class Dapp extends React.Component<Props, State> {
                             – who say, Milady.
                         </div>
 
-                        {/*<div className="use-block-explorer mt-20">*/}
-                        {/*    You can also interact with the smart-contract directly through <a*/}
-                        {/*    href={this.generateContractUrl()}*/}
-                        {/*    target="_blank">{this.state.networkConfig.blockExplorer.name}</a>, without connecting*/}
-                        {/*    your wallet to this UI.*/}
-                        {/*</div>*/}
+                        <article className={"flex flex-row justify-between text-sm"}>
+                            <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>twitter</a></div>
+                            <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>copyleft license</a></div>
+                        </article>
 
-                        {/*{!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?*/}
-                        {/*    <div className="merkle-proof-manual-address">*/}
-                        {/*        <h2>Check whitelist</h2>*/}
-                        {/*        <p>*/}
-                        {/*            Enter address below to check if it is in the whitelist and generate the proof.*/}
-                        {/*        </p>*/}
-
-                        {/*        {this.state.merkleProofManualAddressFeedbackMessage ? <div*/}
-                        {/*            className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}*/}
-
-                        {/*        <label htmlFor="merkle-proof-manual-address">Public address:</label>*/}
-                        {/*        <input id="merkle-proof-manual-address" type="text" placeholder="0x000..."*/}
-                        {/*               disabled={this.state.userAddress !== null}*/}
-                        {/*               value={this.state.userAddress ?? this.state.merkleProofManualAddress}*/}
-                        {/*               ref={(input) => this.merkleProofManualAddressInput = input!} onChange={() => {*/}
-                        {/*            this.setState({merkleProofManualAddress: this.merkleProofManualAddressInput.value})*/}
-                        {/*        }}/>*/}
-                        {/*        <button onClick={() => this.copyMerkleProofToClipboard()}>Generate and copy to*/}
-                        {/*            clipboard*/}
-                        {/*        </button>*/}
-                        {/*    </div>*/}
-                        {/*    : null}*/}
                     </div>
                 }
             </>
