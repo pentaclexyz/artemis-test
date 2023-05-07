@@ -83,10 +83,8 @@ export default class MintWidget extends React.Component<Props, State> {
           </div>
           :
           <div className="cannot-mint">
-            <span className="emoji">⏳</span>
-
-            {this.props.isWhitelistMintEnabled ? <>You are not included in the <strong>whitelist</strong>.</> : <>The contract is <strong>paused</strong>.</>}<br />
-            Please come back during the next sale!
+            {this.props.isWhitelistMintEnabled ? <>You are not included in the <strong>whitelist</strong>.</> : <>The contract is paused.</>}<br />
+            Please come back during the next phase!
           </div>
         }
       </>
