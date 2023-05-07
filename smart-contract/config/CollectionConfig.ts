@@ -12,22 +12,21 @@ const CollectionConfig: CollectionConfigInterface = {
   contractName: "SayMilady",
   tokenName: "Say Milady",
   tokenSymbol: "SAYMILADY",
-  hiddenMetadataUri:
-    "ipfs://QmaYvHyzLgTMNSv8ULiuCAstgQcuWAmUdzj8ryCkKdRU2W/hidden.json",
+  hiddenMetadataUri: 'ipfs://QmaYvHyzLgTMNSv8ULiuCAstgQcuWAmUdzj8ryCkKdRU2W/hidden.json',
   maxSupply: 5000,
   whitelistSale: {
-    price: 0.023,
+    price: 0.02,
     maxMintAmountPerTx: 20,
   },
   preSale: {
-    price: 0.023,
+    price: 0.025,
     maxMintAmountPerTx: 20,
   },
   publicSale: {
-    price: 0.028,
+    price: 0.03,
     maxMintAmountPerTx: 20,
   },
-  contractAddress: null,
+  contractAddress: "0x91866CA0a6cFE52e350117baD18D465B57D5cD01",
   marketplaceIdentifier: "say-milady",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
