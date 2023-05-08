@@ -197,6 +197,7 @@ export default class Dapp extends React.Component<Props, State> {
                     <>
                         {this.isContractReady() ?
                             <>
+                                <h1>this frontpage is tone deaf who do we need to talk to make this say MILADY.</h1>
                                 <div><img src={"/build/images/milady.png"}/></div>
                                 <div className={"not-mainnet p-4"}>
                                     A collection of 5,000 banner NFTs with generative backgrounds and original

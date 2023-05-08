@@ -12,7 +12,7 @@ const CollectionConfig: CollectionConfigInterface = {
   contractName: "SayMilady",
   tokenName: "Say Milady",
   tokenSymbol: "SAYMILADY",
-  hiddenMetadataUri: 'ipfs://QmaYvHyzLgTMNSv8ULiuCAstgQcuWAmUdzj8ryCkKdRU2W/hidden.json',
+  hiddenMetadataUri: 'ipfs://QmWGG79vwmpHAD54kETd35Ei4tipM2vnitnzHgdVPPeVYJ/hidden.json',
   maxSupply: 5000,
   whitelistSale: {
     price: 0.02,
