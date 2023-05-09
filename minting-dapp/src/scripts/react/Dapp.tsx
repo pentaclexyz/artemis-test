@@ -198,7 +198,7 @@ export default class Dapp extends React.Component<Props, State> {
                         {this.isContractReady() ?
                             <>
                                 <div className="preview border-radius-2xl">
-                                    <img src="/build/images/hello.png" alt="Collection preview" />
+                                    <img src="/build/images/hello.gif" alt="Collection preview" />
                                 </div>
                                 <div className={"not-mainnet p-4"}>
                                     A collection of 5,000 banner NFTs with generative backgrounds and original
