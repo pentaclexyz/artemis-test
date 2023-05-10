@@ -241,7 +241,7 @@ export default class Dapp extends React.Component<Props, State> {
                                     </div>
                                 }
                                 <div className={"not-mainnet !text-white p-4 !bg-pink-500"}>
-                                    Maximum mint is 20 per wallet and per transaction. You cannot mint more than once per wallet. aaaaaa :)
+                                    💀💀💀<br/>Maximum mint is 20 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
                                 </div>
                                 <article className={"flex flex-row justify-between text-sm"}>
                                     <div><a href={this.generateContractUrl()}
