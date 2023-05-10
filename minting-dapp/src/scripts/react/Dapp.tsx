@@ -200,6 +200,7 @@ export default class Dapp extends React.Component<Props, State> {
                                 <div className="preview border-radius-2xl">
                                     <img src="/build/images/hello.gif" alt="Collection preview" />
                                 </div>
+
                                 <div className={"not-mainnet p-4"}>
                                     A collection of 5,000 banner NFTs with generative backgrounds and original
                                     text,<br></br>
@@ -239,12 +240,14 @@ export default class Dapp extends React.Component<Props, State> {
                                         <h2>Say Milady is minted out yay!</h2>
                                     </div>
                                 }
-                                <div className={"not-mainnet p-4 !bg-pink-50"}>
-                                    Maximum mint is 20 per wallet and per transaction. You cannot mint more than once per wallet.
+                                <div className={"not-mainnet !text-white p-4 !bg-pink-500"}>
+                                    Maximum mint is 20 per wallet and per transaction. You cannot mint more than once per wallet. aaaaaa :)
                                 </div>
                                 <article className={"flex flex-row justify-between text-sm"}>
-                                    <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>twitter</a></div>
-                                    <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>copyleft license</a></div>
+                                    <div><a href={this.generateContractUrl()}
+                                            target="_blank">Contract</a></div>
+                                    <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>Twitter</a></div>
+                                    <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft license</a></div>
                                 </article>
                             </>
                             :
