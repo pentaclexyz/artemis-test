@@ -199,13 +199,7 @@ export default class Dapp extends React.Component<Props, State> {
                                 </div>
 
                                 <div className={"not-mainnet p-4"}>
-                                    A collection of 5,000 banner NFTs with generative backgrounds and original
-                                    text,<br></br>
-                                    Japanese dolls in photo comic drama style,
-                                    sweet shop Russian supercomputers,
-                                    semi-vintage magazine covers,
-                                    and friends from Pixelady Maker
-                                    – who say, Milady.
+                                    Test
                                 </div>
 
                                 <CollectionStatus
@@ -238,7 +232,7 @@ export default class Dapp extends React.Component<Props, State> {
                                     </div>
                                 }
                                 <div className={"not-mainnet !text-white p-4 !bg-pink-500"}>
-                                    💀💀💀<br/>Maximum mint is 10 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
+                                    💀💀💀<br/>Maximum mint is 1 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
                                 </div>
                                 <article className={"flex flex-row justify-between text-sm"}>
                                     <div><a href={this.generateContractUrl()}
@@ -269,12 +263,7 @@ export default class Dapp extends React.Component<Props, State> {
                             Wallet</button> : null}
 
                         <div className={"mt-8"}>
-                            A collection of 5,000 banner NFTs with generative backgrounds and original text,<br></br>
-                            Japanese dolls in photo comic drama style, <br></br>
-                            sweet shop Russian supercomputers, <br></br>
-                            semi-vintage magazine covers, <br></br>
-                            and friends from Pixelady Maker <br></br>
-                            – who say, Milady.
+                            test
                         </div>
 
                         <article className={"flex flex-row justify-between text-sm"}>
