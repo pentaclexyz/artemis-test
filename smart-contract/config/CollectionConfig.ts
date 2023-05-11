@@ -9,25 +9,25 @@ const CollectionConfig: CollectionConfigInterface = {
   // The contract name can be updated using the following command:
   // yarn rename-contract NEW_CONTRACT_NAME
   // Please DO NOT change it manually!
-  contractName: "SayMiladyTest",
-  tokenName: "Say Milady TEST",
-  tokenSymbol: "SAYMILADY",
+  contractName: "ArtemisTest",
+  tokenName: "Artemis TEST",
+  tokenSymbol: "ARTMSTEST",
   hiddenMetadataUri: 'ipfs://QmWGG79vwmpHAD54kETd35Ei4tipM2vnitnzHgdVPPeVYJ/hidden.json',
-  maxSupply: 5000,
+  maxSupply: 20,
   whitelistSale: {
-    price: 0.025,
-    maxMintAmountPerTx: 10,
+    price: 0.02,
+    maxMintAmountPerTx: 2,
   },
   preSale: {
     price: 0.025,
-    maxMintAmountPerTx: 10,
+    maxMintAmountPerTx: 5,
   },
   publicSale: {
     price: 0.03,
-    maxMintAmountPerTx: 10,
+    maxMintAmountPerTx: 5,
   },
-  contractAddress: "0x3483D6e97442a81243Bb061D0b90FE0fd35f2ce2",
-  marketplaceIdentifier: "say-milady",
+  contractAddress: "0xBD3e5294d73DBe24e6CF55FD809843dCc6E0bd82",
+  marketplaceIdentifier: "artemis-test",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
 };
