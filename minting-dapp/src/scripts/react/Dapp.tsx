@@ -70,10 +70,7 @@ export default class Dapp extends React.Component<Props, State> {
                 <>
                     We were not able to detect MetaMask. You can always interact with the smart-contract
                     through <a href={this.generateContractUrl()}
-                               target="_blank">{this.state.networkConfig.blockExplorer.name}</a> and <strong>we do our
-                    best to provide you with the best user experience possible</strong>, even from there.<br/>
-                    <br/>
-                    You can get your <strong>Whitelist Proof</strong> manually, using the tool below.
+                               target="_blank">{this.state.networkConfig.blockExplorer.name}</a>
                 </>,
             );
         }
@@ -241,7 +238,7 @@ export default class Dapp extends React.Component<Props, State> {
                                     </div>
                                 }
                                 <div className={"not-mainnet !text-white p-4 !bg-pink-500"}>
-                                    💀💀💀<br/>Maximum mint is 20 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
+                                    💀💀💀<br/>Maximum mint is 10 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
                                 </div>
                                 <article className={"flex flex-row justify-between text-sm"}>
                                     <div><a href={this.generateContractUrl()}

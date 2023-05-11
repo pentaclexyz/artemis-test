@@ -15,16 +15,16 @@ const CollectionConfig: CollectionConfigInterface = {
   hiddenMetadataUri: 'ipfs://QmWGG79vwmpHAD54kETd35Ei4tipM2vnitnzHgdVPPeVYJ/hidden.json',
   maxSupply: 5000,
   whitelistSale: {
-    price: 0.02,
-    maxMintAmountPerTx: 20,
+    price: 0.025,
+    maxMintAmountPerTx: 10,
   },
   preSale: {
     price: 0.025,
-    maxMintAmountPerTx: 20,
+    maxMintAmountPerTx: 10,
   },
   publicSale: {
     price: 0.03,
-    maxMintAmountPerTx: 20,
+    maxMintAmountPerTx: 10,
   },
   contractAddress: "0x3483D6e97442a81243Bb061D0b90FE0fd35f2ce2",
   marketplaceIdentifier: "say-milady",
