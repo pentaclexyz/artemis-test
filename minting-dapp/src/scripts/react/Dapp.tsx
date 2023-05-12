@@ -168,10 +168,9 @@ export default class Dapp extends React.Component<Props, State> {
         this.setState({
             merkleProofManualAddressFeedbackMessage:
                 <>
-                    <strong>Congratulations!</strong> <span className="emoji">🎉</span><br/>
-                    Your Merkle Proof <strong>has been copied to the clipboard</strong>. You can paste it into <a
+                    Your Merkle Proof has been copied to the clipboard. You can paste it into <a
                     href={this.generateContractUrl()}
-                    target="_blank">{this.state.networkConfig.blockExplorer.name}</a> to claim your tokens.
+                    target="_blank">{this.state.networkConfig.blockExplorer.name}</a> to mint your tokens.
                 </>,
         });
     }
@@ -228,17 +227,19 @@ export default class Dapp extends React.Component<Props, State> {
                                     />
                                     :
                                     <div className="collection-sold-out">
-                                        <h2>Say Milady is minted out yay!</h2>
+                                        <h2>Test mint is minted out yay!</h2>
                                     </div>
                                 }
                                 <div className={"not-mainnet !text-white p-4 !bg-pink-500"}>
-                                    💀💀💀<br/>Maximum mint is 1 per wallet per transaction. You <u>cannot</u> mint more than once per wallet.
+                                    💀💀💀<br/>Maximum mint is 1 per wallet per transaction. You <u>cannot</u> mint more
+                                    than once per wallet.
                                 </div>
                                 <article className={"flex flex-row justify-between text-sm"}>
                                     <div><a href={this.generateContractUrl()}
                                             target="_blank">Contract</a></div>
                                     <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>Twitter</a></div>
-                                    <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft license</a></div>
+                                    <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft
+                                        license</a></div>
                                 </article>
                             </>
                             :
@@ -256,17 +257,21 @@ export default class Dapp extends React.Component<Props, State> {
                     </>
                     :
                     <div className="no-wallet">
-                        <img id="logo" className={"pb-8"} src="/build/images/milady.png" alt="Logo"/>
+                        {/*<img id="logo" className={"pb-8"} src="/build/images/milady.png" alt="Logo"/>*/}
+
+                        <div className={"mb-8 text-center text-lg"}>
+                            Test mint
+                        </div>
+
+                        <h2 className={"my-4"}>Mint now:</h2>
 
                         {!this.isWalletConnected() ? <button className="primary" disabled={this.provider === undefined}
                                                              onClick={() => this.connectWallet()}>Connect
                             Wallet</button> : null}
 
-                        <div className={"mt-8"}>
-                            test
-                        </div>
+                        <h2 className={"my-8"}>Mint from contract:</h2>
 
-                        <div className="use-block-explorer mt-20">
+                        <div className="use-block-explorer">
                             You can interact with the smart-contract directly through <a
                             href={this.generateContractUrl()}
                             target="_blank">{this.state.networkConfig.blockExplorer.name}</a>, without connecting
@@ -275,15 +280,15 @@ export default class Dapp extends React.Component<Props, State> {
 
                         {!this.isWalletConnected() || this.state.isWhitelistMintEnabled ?
                             <div className="merkle-proof-manual-address">
-                                <h2>Check whitelist</h2>
+                                {/*<h2>Check whitelist</h2>*/}
                                 <p>
-                                    Enter address below to check if it is in the whitelist and generate the proof.
+                                    Enter your wallet address below to check if it is in the whitelist and generate the proof.
                                 </p>
 
                                 {this.state.merkleProofManualAddressFeedbackMessage ? <div
                                     className="feedback-message">{this.state.merkleProofManualAddressFeedbackMessage}</div> : null}
 
-                                <label htmlFor="merkle-proof-manual-address">Wallet address:</label>
+                                <label htmlFor="merkle-proof-manual-address">Enter whitelisted wallet address:</label>
                                 <input id="merkle-proof-manual-address" type="text" placeholder="0x000..."
                                        disabled={this.state.userAddress !== null}
                                        value={this.state.userAddress ?? this.state.merkleProofManualAddress}
@@ -300,7 +305,8 @@ export default class Dapp extends React.Component<Props, State> {
                             <div><a href={this.generateContractUrl()}
                                     target="_blank">Contract</a></div>
                             <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>Twitter</a></div>
-                            <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft license</a></div>
+                            <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft license</a>
+                            </div>
                         </article>
 
                     </div>

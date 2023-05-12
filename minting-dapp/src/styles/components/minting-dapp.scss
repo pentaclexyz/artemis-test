@@ -15,17 +15,17 @@
 
     .use-block-explorer {
       &:not(:first-child) {
-        @apply mt-3;
+        //@apply mt-3;
       }
 
       &:not(:first-child)::before {
         content: '';
         
         @apply block;
-        @apply mx-auto my-3;
+        @apply mx-auto;
         @apply w-12;
 
-        @apply border-t-2 border-popups-internal_border;
+        //@apply border-t-2 border-popups-internal_border;
       }
     }
 
