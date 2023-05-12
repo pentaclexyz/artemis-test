@@ -304,7 +304,7 @@ export default class Dapp extends React.Component<Props, State> {
                         <article className={"flex flex-row justify-between text-sm mt-6"}>
                             <div><a href={this.generateContractUrl()}
                                     target="_blank">Contract</a></div>
-                            <div><a href={"https://twitter.com/saymilady"} target={"_blank"}>Twitter</a></div>
+                            <div><a href={"https://twitter.com/pentcle"} target={"_blank"}>Twitter</a></div>
                             <div><a href={"https://viralpubliclicense.org/"} target={"_blank"}>Copyleft license</a>
                             </div>
                         </article>
