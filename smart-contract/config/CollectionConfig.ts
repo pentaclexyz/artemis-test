@@ -26,7 +26,7 @@ const CollectionConfig: CollectionConfigInterface = {
     price: 0.001,
     maxMintAmountPerTx: 1,
   },
-  contractAddress: "0x9a7B1d38DD88a2eA984fd50D14f4b82a723A7052",
+  contractAddress: "0x3483D6e97442a81243Bb061D0b90FE0fd35f2ce2",
   marketplaceIdentifier: "artemis-dolls",
   marketplaceConfig: Marketplaces.openSea,
   whitelistAddresses,
